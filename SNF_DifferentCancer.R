@@ -151,8 +151,8 @@ tags$div( class ="well",
 server <- function(input, output, session) {
 
 DATA <- reactive({ input$SelectCancer })  
-toReadPath <- reactive({  paste("D:/Research/SNF-NewCode/SNF-Data/InputData/",DATA(),"/", sep="")  })
-toWritePath <- reactive({  paste("D:/Research/SNF-NewCode/SNF-Data/InputData/",DATA(),"/", sep="")  })
+toReadPath <- reactive({  paste("~/SNF-Data/InputData/",DATA(),"/", sep="")  })
+toWritePath <- reactive({  paste("~/SNF-Data/InputData/",DATA(),"/", sep="")  })
   
 Methylation <- reactive({  paste(DATA(),"_Methy_Expression",sep="")  })
 mRNA <- reactive({ paste(DATA(),"_Gene_Expression",sep="") })
